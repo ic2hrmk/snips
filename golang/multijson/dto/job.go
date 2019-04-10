@@ -66,14 +66,17 @@ const (
 )
 
 type JobA struct {
+	Job
 	Properties *JobAProperties
 }
 
 type JobB struct {
+	Job
 	Properties *JobBProperties
 }
 
 type JobC struct {
+	Job
 	Properties *JobCProperties
 }
 
