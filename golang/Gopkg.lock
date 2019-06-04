@@ -69,6 +69,14 @@
   version = "v0.18.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:256a1d3cca087336108031aa6f36904362bc68192a10e5bf096877aefcaee085"
+  name = "github.com/google/uuid"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "c2e93f3ae59f2904160ceaab466009f965df46d6"
+
+[[projects]]
   digest = "1:3e551bbb3a7c0ab2a2bf4660e7fcad16db089fdcfbb44b0199e62838038623ea"
   name = "github.com/json-iterator/go"
   packages = ["."]
@@ -151,6 +159,7 @@
     "github.com/emicklei/go-restful",
     "github.com/emicklei/go-restful-openapi",
     "github.com/go-openapi/spec",
+    "github.com/google/uuid",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

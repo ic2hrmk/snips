@@ -108,7 +108,7 @@ func walkIslandFromPoint(i, j int, field [][]cell, isl *island) {
 	//
 	// Try right
 	//
-	if j+1 < len(field[i]) && field[i][j+1].isLand()  {
+	if j+1 < len(field[i]) && field[i][j+1].isLand() {
 		walkIslandFromPoint(i, j+1, field, isl)
 	}
 
@@ -129,7 +129,7 @@ func walkIslandFromPoint(i, j int, field [][]cell, isl *island) {
 
 func printField(field [][]cell) {
 	const (
-		regularCellPattern   = "  %s  "
+		regularCellPattern = "  %s  "
 
 		landCellPattern   = "*"
 		watterCellPattern = "~"
@@ -165,7 +165,7 @@ func printIsland(xFieldSize, yFieldSize int, isl *island) {
 		}
 	}
 
-	for _ , c := range isl.coordinates {
+	for _, c := range isl.coordinates {
 		field[c.x][c.y] = land
 	}
 
