@@ -1,0 +1,63 @@
+version: '3.1'
+
+volumes:
+  common_mongo_data:
+    external: true
+  common_postgres_data:
+    external: true
+  common_redis_data:
+    external: true
+
+services:
+  consul:
+    image: "consul"
+    ports:
+      - "8300:8300"
+      - "8500:8500"
+      - "8600:8600"
+
+  mongo:
+    image: mongo
+    volumes:
+      - common_mongo_data:/data/db
+    ports:
+      - 27017:27017
+
+  mongo_express:
+    restart: on-failure
+    image: mongo-express
+    ports:
+      - 7017:8081
+    depends_on:
+      - mongo
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: nopass
+    ports:
+      - 5433:5432
+    volumes:
+      - common_postgres_data:/var/lib/postgresql/data
+    command: "postgres -c 'max_connections=300'"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+  redis:
+    image: bitnami/redis
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - 6379:6379
+    volumes:
+      - common_redis_data:/bitnami
+
+  app:
+    image: busybox:1.30
+    env_file: .env
+    restart: always
