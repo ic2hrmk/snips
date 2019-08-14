@@ -37,6 +37,14 @@
   name = "github.com/go-openapi/spec"
   version = "0.18.0"
 
+[[constraint]]
+  name = "github.com/mattn/go-gtk"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/mattn/go-webkit"
+  branch = "master"
+
 [prune]
   go-tests = true
   unused-packages = true

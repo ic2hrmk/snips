@@ -89,6 +89,37 @@
   revision = "60711f1a8329503b04e1c88535f419d0bb440bff"
 
 [[projects]]
+  branch = "master"
+  digest = "1:e1037385894d5f6e0ff10646e72a32a107c403e6f30c6b09fd317687185a393f"
+  name = "github.com/mattn/go-gtk"
+  packages = [
+    "gdk",
+    "gdkpixbuf",
+    "gio",
+    "glib",
+    "gtk",
+    "pango",
+  ]
+  pruneopts = "UT"
+  revision = "4deadb416788be678fb9cac22ea76dba83c946b0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:f734c43ec01de1063c0e281153c85c1a1897614aca08bd68477b7eaa8569a7fa"
+  name = "github.com/mattn/go-pointer"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "49522c3f37914a12a6813caf41f4a9e84d39ca0a"
+
+[[projects]]
+  branch = "master"
+  digest = "1:8d0c70f7a3f43edcbd62dd5d42be905b07c2ddeff7e99efef76395f66a7726e5"
+  name = "github.com/mattn/go-webkit"
+  packages = ["webkit"]
+  pruneopts = "UT"
+  revision = "03ac742627e1d52933a4b5d3412a68f01ba7368b"
+
+[[projects]]
   digest = "1:33422d238f147d247752996a26574ac48dcf472976eda7f5134015f06bf16563"
   name = "github.com/modern-go/concurrent"
   packages = ["."]
@@ -151,6 +182,8 @@
     "github.com/emicklei/go-restful",
     "github.com/emicklei/go-restful-openapi",
     "github.com/go-openapi/spec",
+    "github.com/mattn/go-gtk/gtk",
+    "github.com/mattn/go-webkit/webkit",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
