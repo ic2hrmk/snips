@@ -30,7 +30,7 @@ services:
       - 7017:8081
     depends_on:
       - mongo
-  
+
   postgres:
     image: postgres
     restart: always
@@ -56,3 +56,8 @@ services:
       - 6379:6379
     volumes:
       - common_redis_data:/bitnami
+
+  app:
+    image: busybox:1.30
+    env_file: .env
+    restart: always

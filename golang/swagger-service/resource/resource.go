@@ -40,7 +40,7 @@ func NewBaseResourceWithSwagger(
 		PostBuildSwaggerObjectHandler: func(swo *spec.Swagger) {
 			swo.Info = &spec.Info{
 				InfoProps: spec.InfoProps{
-					Title: "Base API docs",
+					Title:       "Base API docs",
 					Description: "Basic documentation for 'Base Service'",
 					Contact: &spec.ContactInfo{
 						Name: "Base Team",
@@ -74,9 +74,7 @@ func NewBaseResourceWithSwagger(
 
 func NewBaseWebService(
 	resource *BaseResource,
-) (
-	*restful.WebService,
-) {
+) *restful.WebService {
 	ws := &restful.WebService{}
 
 	tags := []string{"Base resource"}
