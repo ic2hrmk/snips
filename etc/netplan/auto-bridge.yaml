@@ -1,0 +1,10 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: false
+  bridges:
+    br-eth0:
+      interfaces: [eth0]
+      dhcp4: true
